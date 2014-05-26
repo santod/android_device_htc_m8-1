@@ -62,7 +62,9 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := liquid_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := sm-arm-eabi-4.10
+TARGET_GCC_VERSION_ARM := 4.10-sm
+TARGET_GCC_VERSION_AND := 4.9-sm
+
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
