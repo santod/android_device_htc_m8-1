@@ -63,7 +63,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := liquid_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 TARGET_GCC_VERSION_ARM := 4.10-sm
-TARGET_GCC_VERSION_AND := 4.9-sm
+TARGET_GCC_VERSION_AND := 4.8-sm
 
 
 # QCOM hardware
