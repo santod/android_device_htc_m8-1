@@ -241,11 +241,14 @@ vendor/firmware/keymaster.b01
 vendor/firmware/keymaster.b02
 vendor/firmware/keymaster.b03
 vendor/firmware/keymaster.mdt
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/egl/libplayback_adreno.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbmapper.so
 vendor/lib/libacdbrtac.so
