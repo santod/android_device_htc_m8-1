@@ -54,7 +54,7 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -84,6 +84,7 @@ BOARD_USES_ALSA_AUDIO := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m8/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
@@ -190,3 +191,6 @@ TARGET_EXTERNAL_APPS = sdcard1
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
+
+# Hardware
+BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
