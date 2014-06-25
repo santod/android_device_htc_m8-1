@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += Dotcase
 # HTC IR Blaster resources
 PRODUCT_PACKAGES += \
     CIRModule \
+    HTC_CIR \
     htcirlibs \
     cir \
     cir_fw_update \
