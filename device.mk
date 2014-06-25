@@ -34,6 +34,14 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Dot View Case
 PRODUCT_PACKAGES += Dotcase
 
+# HTC IR Blaster resources
+PRODUCT_PACKAGES += \
+    CIRModule \
+    htcirlibs \
+    cir \
+    cir_fw_update \
+    libhtcirinterface_jni
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
