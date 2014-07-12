@@ -277,12 +277,5 @@
     <!-- Base "touch slop" value used by ViewConfiguration as a
          movement threshold where scrolling should begin. -->
     <dimen name="config_viewConfigurationTouchSlop">4dp</dimen>
-    
-    <!-- The second metric to be used for antenna bar display for LTE
-          The metrics to be used for Antenna display is based on RSRP and either one of the
-           0. RSSNR
-           1. RSRQ
-    -->
-    <integer name="config_LTE_antenna_bar_quantity_metric">1</integer>
 
 </resources>
