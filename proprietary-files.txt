@@ -1,4 +1,5 @@
 -app/EasyAccessService.apk
+-app/QuickBoot.apk
 bin/adsprpcd
 bin/ATFWD-daemon
 bin/cir_fw_update
