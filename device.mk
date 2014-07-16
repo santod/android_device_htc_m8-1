@@ -24,8 +24,8 @@ $(call inherit-product-if-exists, vendor/htc/m8-common/m8-common-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/htc/m8/overlay
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+PRODUCT_COPY_FILES += \
+    device/htc/m8/overlay/prebuilt/1080.zip:system/media/bootanimation.zip
 
 # Device uses ultra-high-density artwork where available
 PRODUCT_AAPT_CONFIG := hdpi xhdpi xxhdpi
