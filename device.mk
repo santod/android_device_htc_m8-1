@@ -42,10 +42,6 @@ PRODUCT_PACKAGES += \
     cir_fw_update \
     libhtcirinterface_jni
 
-# Gestures
-PRODUCT_PACKAGES += \
-    DeviceHandler
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
