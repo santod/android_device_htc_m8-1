@@ -646,7 +646,6 @@ on property:init.svc.bootanim=stopped
     write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1190400
     write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads 75
-    write /sys/devices/system/cpu/cpufreq/interactive/target_loads_down 50
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time "40000 1700000:80000"
     write /sys/devices/system/cpu/cpufreq/interactive/timer_rate "60000 500000:40000 1500000:30000 2000000:20000"
     write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 100000
