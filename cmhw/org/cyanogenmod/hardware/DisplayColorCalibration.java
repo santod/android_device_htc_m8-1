@@ -23,8 +23,7 @@ public class DisplayColorCalibration {
     private static final String COLOR_FILE_CTRL = "/sys/devices/platform/kcal_ctrl.0/kcal_ctrl";
 
     public static boolean isSupported() {
-        File f = new File(COLOR_FILE);
-        return f.exists();
+        return true;
     }
 
     public static int getMaxValue()  {
