@@ -179,7 +179,38 @@ BOARD_RECOVERY_SWIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_FSTAB := device/htc/m8/rootdir/etc/fstab.qcom
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+
+#TWRP config:
+RECOVERY_VARIANT := twrp
+DEVICE_RESOLUTION := 1080x1920
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := true
+TW_NO_SCREEN_BLANK := true
+TW_MAX_BRIGHTNESS := 255
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+
+#MultiROM config. MultiROM also uses parts of TWRP config
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/htc/m8/mr_init_devices.c
+MR_DPI := xhdpi
+MR_FSTAB := device/htc/m8/rootdir/etc/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x20000000
+MR_KEXEC_DTB := true
+#MR_INFOS := device/htc/m8/mrom_infos
+MR_DEVICE_HOOKS := device/htc/m8/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 3
+MR_DEVICE_RECOVERY_HOOKS := device/htc/m8/mr_hooks_recovery.c
+MR_DEVICE_RECOVERY_HOOKS_VER := 1
+MR_KEXEC_MEM_MIN := 0x85000000
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
