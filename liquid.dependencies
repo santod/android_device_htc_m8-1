@@ -3,7 +3,7 @@
     "remote": "lsd",
     "repository": "android_kernel_htc_msm8974",
     "target_path": "kernel/htc/msm8974",
-    "revision": "kitkat"
+    "revision": "kitkat-caf"
   },
   {
     "remote": "lsd",
@@ -12,16 +12,16 @@
     "revision": "kitkat"
   },
   {
-    "remote": "ls",
+    "remote": "cm",
     "repository": "android_hardware_qcom_display-caf-new",
     "target_path": "hardware/qcom/display-caf-new",
-    "revision": "m8"
+    "revision": "cm-11.0"
   },
   {
-    "remote": "ls",
+    "remote": "cm",
     "repository": "android_hardware_qcom_media-caf-new",
     "target_path": "hardware/qcom/media-caf-new",
-    "revision": "kitkat"
+    "revision": "cm-11.0"
   },
   {
     "remote": "ls",
