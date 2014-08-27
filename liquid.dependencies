@@ -6,10 +6,10 @@
     "revision": "kitkat-caf"
   },
   {
-    "remote": "lsd",
+    "remote": "cm",
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "revision": "kitkat"
+    "revision": "cm-11.0"
   },
   {
     "remote": "cm",
@@ -24,9 +24,9 @@
     "revision": "cm-11.0"
   },
   {
-    "remote": "ls",
-    "repository": "android_vendor_htc",
+    "remote": "tm",
+    "repository": "proprietary_vendor_htc",
     "target_path": "vendor/htc",
-    "revision": "kitkat"
+    "revision": "cm-11.0"
   }
 ]
