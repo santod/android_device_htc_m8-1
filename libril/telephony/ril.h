@@ -43,6 +43,12 @@ extern "C" {
 #define MAX_DEBUG_SOCKET_NAME_LENGTH 12
 #define MAX_QEMU_PIPE_NAME_LENGTH  11
 
+#define MAX_RILDS 3
+#define MAX_SOCKET_NAME_LENGTH 6
+#define MAX_CLIENT_ID_LENGTH 2
+#define MAX_DEBUG_SOCKET_NAME_LENGTH 12
+#define MAX_QEMU_PIPE_NAME_LENGTH  11
+
 typedef void * RIL_Token;
 
 typedef enum {
@@ -3773,41 +3779,6 @@ typedef struct {
  */
 #define RIL_REQUEST_GET_DATA_CALL_PROFILE 114
 
-/**
- * RIL_REQUEST_SET_UICC_SUBSCRIPTION
- *
- * Selection/de-selection of a subscription from a SIM card
- * "data" is const  RIL_SelectUiccSub*
-
- *
- * "response" is NULL
- *
- *  Valid errors:
- *  SUCCESS
- *  RADIO_NOT_AVAILABLE (radio resetting)
- *  GENERIC_FAILURE
- *  SUBSCRIPTION_NOT_SUPPORTED
- *
- */
-#define RIL_REQUEST_SET_UICC_SUBSCRIPTION  115
-
-/**
- *  RIL_REQUEST_SET_DATA_SUBSCRIPTION
- *
- *  Selects a subscription for data call setup
- * "data" is NULL
- *
- * "response" is NULL
- *
- *  Valid errors:
- *
- *  SUCCESS
- *  RADIO_NOT_AVAILABLE (radio resetting)
- *  GENERIC_FAILURE
- *  SUBSCRIPTION_NOT_SUPPORTED
- *
- */
-#define RIL_REQUEST_SET_DATA_SUBSCRIPTION  116
 
 /***********************************************************************/
 
@@ -4334,22 +4305,6 @@ typedef struct {
  *
  */
 #define RIL_UNSOL_STK_CC_ALPHA_NOTIFY 1040
-
-/**
- * RIL_UNSOL_UICC_SUBSCRIPTION_STATUS_CHANGED
- *
- * Indicated when there is a change in subscription status.
- * This event will be sent in the following scenarios
- *  - subscription readiness at modem, which was selected by telephony layer
- *  - when subscription is deactivated by modem due to UICC card removal
- *  - When network invalidates the subscription i.e. attach reject due to authentication reject
- *
- * "data" is const int *
- * ((const int *)data)[0] == 0 for Subscription Deactivated
- * ((const int *)data)[0] == 1 for Subscription Activated
- *
- */
-#define RIL_UNSOL_UICC_SUBSCRIPTION_STATUS_CHANGED 1041
 
 /**
  * Custom responses for HTCQualcommRIL.java
