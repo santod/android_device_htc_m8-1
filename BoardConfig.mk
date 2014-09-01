@@ -202,6 +202,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 MR_INPUT_TYPE := type_b
 MR_INIT_DEVICES := device/htc/m8/mr_init_devices.c
 MR_DPI := xhdpi
+MR_DPI_FONT := 340
 MR_FSTAB := device/htc/m8/rootdir/etc/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x20000000
 MR_KEXEC_DTB := true
