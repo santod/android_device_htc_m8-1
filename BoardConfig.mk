@@ -205,13 +205,13 @@ MR_DPI := xhdpi
 MR_DPI_FONT := 340
 MR_FSTAB := device/htc/m8/rootdir/etc/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x20000000
+MR_USE_MROM_FSTAB := true
 MR_KEXEC_DTB := true
-#MR_INFOS := device/htc/m8/mrom_infos
+MR_INFOS := device/htc/m8/mrom_infos
 MR_DEVICE_HOOKS := device/htc/m8/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 3
 MR_DEVICE_RECOVERY_HOOKS := device/htc/m8/mr_hooks_recovery.c
 MR_DEVICE_RECOVERY_HOOKS_VER := 1
-MR_KEXEC_MEM_MIN := 0x85000000
 MR_CONTINUOUS_FB_UPDATE := true
 
 # Vendor Init
