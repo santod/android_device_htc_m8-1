@@ -27,7 +27,7 @@
     "remote": "ls",
     "repository": "android_vendor_htc",
     "target_path": "vendor/htc",
-    "revision": "kitkat
+    "revision": "kitkat"
   },
   {
     "remote": "cm",
