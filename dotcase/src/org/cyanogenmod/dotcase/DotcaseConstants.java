@@ -46,7 +46,8 @@ public class DotcaseConstants {
         KIK,
         MESSENGER,
         COUPLES,
-        DOTS
+        DOTS,
+        GROUPME
     }
 
     /**
@@ -70,6 +71,7 @@ public class DotcaseConstants {
     static final Paint pTBlue = new Paint();
     static final Paint pFbBlue = new Paint();
     static final Paint pPink = new Paint();
+    static final Paint pGMEBlue = new Paint();
 
     static {
         pTrans.setARGB(0, 0, 0, 0);
@@ -89,6 +91,7 @@ public class DotcaseConstants {
         pTBlue.setARGB(255, 85, 172, 238);
         pFbBlue.setARGB(255, 59, 89, 152);
         pPink.setARGB(255, 255, 100, 200);
+        pGMEBlue.setARGB(255, 0, 175, 240);
     }
 
     static Paint getPaintFromNumber(int color) {
@@ -127,6 +130,8 @@ public class DotcaseConstants {
                 return pFbBlue;
             case 15:
                 return pPink;
+            case 16:
+                return pGMEBlue;
             default:
                 return pBlack;
         }
@@ -191,6 +196,9 @@ public class DotcaseConstants {
         // Messaging apps
         notificationMap.put("kik.android", Notification.KIK); // KIK
         notificationMap.put("com.facebook.orca", Notification.MESSENGER); // Facebook Messenger
+
+        // Other apps
+        notificationMap.put("com.groupme.android", Notification.GROUPME);
     }
 
     /**
@@ -327,6 +335,16 @@ public class DotcaseConstants {
         {0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0}};
 
+    static final int[][] groupmeSprite = {  // I think this is going to suck
+        {16, 16, 16, 16, 16, 16, 16},
+        {16, 16,  1, 16,  1, 16, 16},
+        {16,  1,  1,  1,  1,  1, 16},
+        {16, 16,  1, 16,  1, 16, 16},
+        {16,  1,  1,  1,  1,  1, 16},
+        {16, 16,  1, 16,  1, 16, 16},
+        {16, 16, 16, 16, 16, 16, 16},
+        {0,   0,  0, 16,  0,  0,  0}};
+
     static int[][] getNotificationSprite(Notification notification) {
         switch (notification) {
             case EMAIL:
@@ -355,6 +373,8 @@ public class DotcaseConstants {
                 return messengerSprite;
             case DOTS:
                 return dotsSprite;
+            case GROUPME:
+                return groupmeSprite;
             default:
                 return null;
         }
