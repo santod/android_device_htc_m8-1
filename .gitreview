@@ -2,4 +2,4 @@
 host=gerrit.liquidsmooth.net
 port=29418
 project=LiquidSmooth-Devices/android_device_htc_m8.git
-defaultbranch=kitkat
+defaultbranch=lollipop
