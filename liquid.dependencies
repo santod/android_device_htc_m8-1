@@ -6,10 +6,10 @@
     "revision": "lollipop"
   },
   {
-    "remote": "lsd",
+    "remote": "cm",
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common",
-    "revision": "lollipop"
+    "revision": "cm-12.0"
   },
   {
     "remote": "cm",
@@ -30,10 +30,10 @@
     "revision": "cm-12.0-caf-8974"
   },
   {
-    "remote": "ls",
+    "remote": "tm",
     "repository": "android_vendor_htc",
     "target_path": "vendor/htc",
-    "revision": "lollipop"
+    "revision": "cm-12.0"
   },
   {
     "remote": "cm",
