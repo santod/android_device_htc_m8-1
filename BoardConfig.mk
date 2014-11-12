@@ -57,7 +57,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Enable ArchiDroid Optimizations
-USE_ARCH_OPTIMIZATIONS=true
+# USE_ARCH_OPTIMIZATIONS=true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
@@ -68,8 +68,8 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := liquid_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-TARGET_GCC_VERSION_ARM := 4.10-sm
-TARGET_GCC_VERSION_AND := 4.8-sm
+# TARGET_GCC_VERSION_ARM := 4.10-sm
+# TARGET_GCC_VERSION_AND := 4.8-sm
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
