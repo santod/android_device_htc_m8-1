@@ -285,5 +285,5 @@
          turn the screen on
          NOTE ! - Enable for devices that have a fast response proximity sensor
     -->
-    <bool name="config_proximityCheckOnWake">true</bool>
+    <!--bool name="config_proximityCheckOnWake">true</bool-->
 </resources>
