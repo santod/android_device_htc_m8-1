@@ -165,7 +165,6 @@ BOARD_SEPOLICY_UNION += \
     surfaceflinger.te \
     system.te \
     ueventd.te \
-    wpa_socket.te \
     wpa.te
 
 # Webkit
