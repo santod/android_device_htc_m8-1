@@ -16,11 +16,7 @@
 
 #define CAMERA_PARAMETERS_EXTRA_C \
 const char CameraParameters::KEY_TIME_CONS_POST_PROCESSING[] = "time-cons-post-processing"; \
-const char CameraParameters::KEY_OIS_MODE[] = "ois_mode"; \
 const char CameraParameters::KEY_APP_OIS_SETTING[] = "ois-setting"; \
-const char CameraParameters::KEY_OIS_SUPPORT[] = "ois_support"; \
-const char CameraParameters::KEY_CONTIBURST_TYPE[] = "contiburst-type"; \
-const char CameraParameters::KEY_CAPTURE_MODE[] = "capture-mode"; \
 const char CameraParameters::CAPTURE_MODE_NORMAL[] = "normal"; \
 const char CameraParameters::CAPTURE_MODE_CONTI_ZOE[] = "contizoe"; \
 const char CameraParameters::CAPTURE_MODE_CONTI_BURST[] = "contiburst"; \
@@ -57,19 +53,13 @@ const char CameraParameters::KEY_GPU_EFFECT_PARAM_1[] = "GE-param1"; \
 const char CameraParameters::KEY_GPU_EFFECT_PARAM_2[] = "GE-param2"; \
 const char CameraParameters::KEY_GPU_EFFECT_PARAM_3[] = "GE-param3"; \
 const char CameraParameters::KEY_FORCE_USE_AUDIO_ENABLED[] = "forceuseaudio"; \
-const char CameraParameters::KEY_ZSL[] = "zsl"; \
-const char CameraParameters::KEY_CAMERA_MODE[] = "camera-mode"; \
 void CameraParameters::getBrightnessLumaTargetSet(int *magic, int *sauce) const{} \
 void CameraParameters::getRawSize(int *magic, int *sauce) const{}
 
 
 #define CAMERA_PARAMETERS_EXTRA_H \
     static const char KEY_TIME_CONS_POST_PROCESSING[]; \
-    static const char KEY_OIS_MODE[]; \
     static const char KEY_APP_OIS_SETTING[]; \
-    static const char KEY_OIS_SUPPORT[]; \
-    static const char KEY_CONTIBURST_TYPE[]; \
-    static const char KEY_CAPTURE_MODE[]; \
     static const char CAPTURE_MODE_NORMAL[]; \
     static const char CAPTURE_MODE_CONTI_ZOE[]; \
     static const char CAPTURE_MODE_CONTI_BURST[]; \
@@ -106,7 +96,5 @@ void CameraParameters::getRawSize(int *magic, int *sauce) const{}
     static const char KEY_GPU_EFFECT_PARAM_2[]; \
     static const char KEY_GPU_EFFECT_PARAM_3[]; \
     static const char KEY_FORCE_USE_AUDIO_ENABLED[]; \
-    static const char KEY_ZSL[]; \
-    static const char KEY_CAMERA_MODE[]; \
     void getRawSize(int *magic, int *sauce) const; \
     void getBrightnessLumaTargetSet(int *magic, int *sauce) const;
