@@ -12,24 +12,6 @@
     "revision": "cm-12.0"
   },
   {
-    "remote": "cm",
-    "repository": "android_hardware_qcom_display",
-    "target_path": "hardware/qcom/display-caf/msm8974",
-    "revision": "cm-12.0-caf-8974"
-  },
-  {
-    "remote": "cm",
-    "repository": "android_hardware_qcom_media",
-    "target_path": "hardware/qcom/media-caf/msm8974",
-    "revision": "cm-12.0-caf-8974"
-  },
-  {
-    "remote": "cm",
-    "repository": "android_hardware_qcom_audio",
-    "target_path": "hardware/qcom/audio-caf/default",
-    "revision": "cm-12.0-caf-8974"
-  },
-  {
     "remote": "tm",
     "repository": "proprietary_vendor_htc",
     "target_path": "vendor/htc",

@@ -48,7 +48,7 @@ TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
-TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
@@ -78,7 +78,6 @@ TARGET_USES_QCOM_BSP := true
 
 # Audio
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_SEPARATE_SPKR_BACKEND := true
 BOARD_AUDIO_AMPLIFIER := device/htc/m8/libaudioamp
 BOARD_USES_ALSA_AUDIO := true
 
@@ -96,6 +95,9 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # Charge mode
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
+# Font
+EXTENDED_FONT_FOOTPRINT := true
+
 # Graphics
 BOARD_EGL_CFG := device/htc/m8/configs/egl.cfg
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
@@ -107,6 +109,9 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+
+# Includes
+TARGET_SPECIFIC_HEADER_PATH := device/htc/m8/include
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -142,41 +147,16 @@ TARGET_USES_WCNSS_CTRL := true
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP := "ap"
 
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/htc/m8/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    app.te \
-    bluetooth.te \
-    device.te \
-    domain.te \
-    drmserver.te \
-    file_contexts \
-    file.te \
-    hci_init.te \
-    healthd.te \
-    init_shell.te \
-    init.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    rild.te \
-    surfaceflinger.te \
-    system.te \
-    ueventd.te \
-    wpa_socket.te \
-    wpa.te
-
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
 # Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 274464768
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 274464768
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2818572288
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 11676942336
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 25165824
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 13153337344
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
@@ -189,6 +169,29 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_FSTAB := device/htc/m8/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/htc/m8/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    cir_fw_update.te \
+    device.te \
+    file_contexts \
+    file.te \
+    hcheck.te \
+    init.te \
+    kernel.te \
+    mediaserver.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    platform_app.te \
+    rmt_storage.te \
+    system_app.te \
+    tap2wake_dev.te \
+    thermal-engine.te \
+    ueventd.te \
+    vold.te
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
