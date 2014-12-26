@@ -57,7 +57,9 @@ done
 # Pick up overlay for features that depend on non-open-source files
 PRODUCT_PACKAGES += \\
     EasyAccessService \\
-    libtime_genoff
+    libtime_genoff \\
+    CIRModule \\
+    htcirlibs
 
 \$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
@@ -112,6 +114,7 @@ include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := htcirlibs
+LOCAL_MODULE_OWNER := htc
 LOCAL_SRC_FILES := proprietary/framework/htcirlibs.jar
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_MODULE_TAGS := optional
@@ -120,8 +123,9 @@ LOCAL_MODULE_SUFFIX := .jar
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := HTC_CIR
-LOCAL_SRC_FILES := proprietary/app/HTC_CIR.apk
+LOCAL_MODULE := CIRModule
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/app/CIRModule.apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_CERTIFICATE := platform

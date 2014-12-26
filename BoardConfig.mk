@@ -28,7 +28,8 @@
 # 0P6B20000 - Verizon
 # 0P6B70000 - Sprint
 
-TARGET_OTA_ASSERT_DEVICE := m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
+TARGET_OTA_ASSERT_DEVICE := htc_m8,htc_m8whl,htc_m8wl,m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
+TARGET_BOARD_INFO_FILE ?= device/htc/m8/board-info.txt
 
 BOARD_VENDOR := htc
 
@@ -43,21 +44,14 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a15
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
-# Charge mode
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
-
 # Flags
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
-
-# Enable ArchiDroid Optimizations
-# USE_ARCH_OPTIMIZATIONS=true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
@@ -80,6 +74,8 @@ TARGET_USES_QCOM_BSP := true
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
 BOARD_AUDIO_AMPLIFIER := device/htc/m8/libaudioamp
 BOARD_USES_ALSA_AUDIO := true
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -124,7 +120,6 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_POWERHAL_NO_TOUCH_BOOST := true
 
 # RIL
 BOARD_PROVIDES_LIBRIL := true
@@ -181,16 +176,21 @@ BOARD_SEPOLICY_UNION += \
     file.te \
     hcheck.te \
     init.te \
+    kcal_dev.te \
     kernel.te \
     mediaserver.te \
     mm-qcamerad.te \
     mpdecision.te \
     platform_app.te \
+    property_contexts \
+    recovery.te \
     rmt_storage.te \
     system_app.te \
+    system_server.te \
     tap2wake_dev.te \
     thermal-engine.te \
     ueventd.te \
+    vibe_dev.te \
     vold.te
 
 # Vendor Init
@@ -203,6 +203,3 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
-
-# External apps on SD
-TARGET_EXTERNAL_APPS = sdcard1
